@@ -20,6 +20,7 @@ function navegacionFija(){
 
     //Elemento a observar
     observer.observe(document.querySelector('.sobre-festival'));
+
 }
 
 

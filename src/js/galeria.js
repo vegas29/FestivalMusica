@@ -1,9 +1,11 @@
 document.addEventListener('DOMContentLoaded', function(){
     crearGaleria();
+    
 });
 
 function crearGaleria(){
     const galeria = document.querySelector('.galeria-imagenes');
+    
 
     for(let i = 1; i<=12; i++){
         const imagen = document.createElement('IMG');
@@ -19,7 +21,9 @@ function crearGaleria(){
 
         galeria.appendChild(lista);
     }
+    
 }
+
 
 function mostrarImagen(e){
     const id = parseInt(e.target.dataset.imagenId);
@@ -49,6 +53,12 @@ function mostrarImagen(e){
 
     cerrarImagen.onclick = function(){
         overlay.remove();
+
+        const body = document.querySelector('body');
+
+        if(body.classList.value === 'fijar-body'){
+            body.classList.remove('fijar-body');
+        }
     }
 
     overlay.appendChild(cerrarImagen);
